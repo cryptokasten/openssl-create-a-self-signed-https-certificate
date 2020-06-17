@@ -33,6 +33,15 @@ openssl req \
        -subj "$SUBJ"
 #+END_SRC
 
+Or using the interactive mode.
+
+#+BEGIN_SRC sh
+openssl req \
+       -newkey rsa:2048 -nodes -keyout keys/domain.key \
+       -x509 -days 365 -out keys/domain.crt
+#+END_SRC
+
+
 Results:
 
 - =keys/domain.key= is private key.
